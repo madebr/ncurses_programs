@@ -1,0 +1,4 @@
+- need to catch every out-of-bounds driver action
+- new_item only accepts tuple of items (no list of other iterable)
+- menu_scroll: my_menu_win must be created with stdscr.derwin (curses.newwin did not work)
+- byte strings returned by name/description/...

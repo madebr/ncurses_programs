@@ -1,0 +1,10 @@
+Description of files 
+--------------------
+JustForFun
+    |
+    |----> hanoi.py     -- The Towers of Hanoi Solver
+    |----> life.py      -- The Game of Life demo
+    |----> magic.py     -- An Odd Order Magic Square builder
+    |----> queens.py    -- The famous N-Queens Solver
+    |----> shuffle.py   -- A fun game, if you have time to kill
+    |----> tt.py        -- A very trivial typing tutor

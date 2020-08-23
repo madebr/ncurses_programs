@@ -13,6 +13,7 @@ ncurses
    |----> panels             -- programs related to panels library
    |----> perl               -- perl equivalents of the examples (contributed
    |                            by Anuradha Ratnaweera)
+   |----> python             -- python equivalents for all programs (except form and menu)
    |----> Makefile           -- the top level Makefile
    |----> README             -- the top level README file. contains instructions
    |			             -- to create executables for example programs
