@@ -40,7 +40,9 @@ int main()
 
 	/* Print the menu for the first time */
 	menu_win = newwin(HEIGHT, WIDTH, starty, startx);
+	/* Need to interpret escape sequences */
 	print_menu(menu_win, 1);
+	keypad(menu_win, TRUE);
 	/* Get all the mouse events */
 	mousemask(ALL_MOUSE_EVENTS, NULL);
 	

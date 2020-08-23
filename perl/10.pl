@@ -84,7 +84,7 @@ sub print_menu {
     box($menu_win, 0, 0);
     for ($i = 0; $i < $n_choices; $i++) {
 	if ($highlight == $i + 1) {
-	    attron($menu_win, A_REVERSE);
+	    attron($menu_win, A_VERSE);
 	    addstr($menu_win, $y, $x, $choices[$i]);
 	    attroff($menu_win, A_REVERSE);
 	}
