@@ -17,12 +17,13 @@ EXES = \
 	${EXE_DIR}/tt
 
 ${EXE_DIR}/%: %.o
+	mkdir -p "${EXE_DIR}"
 	${CC} -o $@ $< ${LIBS}
 
 %.o: ${SRC_DIR}/%.c
-	${CC} -o $@ -c $<
+	${CC} ${CFLAGS} -o $@ -c $<
 
-all:    ${EXES}
+all: ${EXES}
 
 clean:
 	@rm -f ${EXES}

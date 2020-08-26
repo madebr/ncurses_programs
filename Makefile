@@ -1,6 +1,6 @@
 # The top level Makefile
 
-all:	
+all:
 	cd JustForFun 	&& $(MAKE)
 	cd basics	&& $(MAKE)
 	cd forms	&& $(MAKE)

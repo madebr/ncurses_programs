@@ -1,5 +1,7 @@
 #include <curses.h>
 
+#include <stdlib.h>
+
 int STARTX = 0;
 int STARTY = 0;
 int ENDX = 79;

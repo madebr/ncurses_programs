@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[])
 { 
-  int ch, prev, row, col;
+  int ch, prev, row;
   prev = EOF;
   FILE *fp;
   int y, x;
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     exit(1);
   }
   initscr();				/* Start curses mode */
-  getmaxyx(stdscr, row, col);		/* find the boundaries of the screeen */
+  row = getmaxy(stdscr);		/* find the boundaries of the screeen */
   while((ch = fgetc(fp)) != EOF)	/* read the file till we reach the end */
   {
     getyx(stdscr, y, x);		/* get the current curser position */

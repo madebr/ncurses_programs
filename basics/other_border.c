@@ -16,7 +16,7 @@ void init_win_params(WIN *p_win);
 void print_win_params(WIN *p_win);
 void create_box(WIN *win, bool flag);
 
-int main(int argc, char *argv[])
+int main()
 {	WIN win;
 	int ch;
 
@@ -84,10 +84,11 @@ void init_win_params(WIN *p_win)
 }
 void print_win_params(WIN *p_win)
 {
+	(void)p_win;
 #ifdef _DEBUG
-	mvprintw(25, 0, "%d %d %d %d", p_win->startx, p_win->starty, 
+	mvwprintw(p_win, 25, 0, "%d %d %d %d", p_win->startx, p_win->starty,
 				p_win->width, p_win->height);
-	refresh();
+	wrefresh(p_win);
 #endif
 }
 void create_box(WIN *p_win, bool flag)

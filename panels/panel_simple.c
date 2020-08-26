@@ -1,3 +1,4 @@
+#include <curses.h>
 #include <panel.h>
 
 int main()
@@ -31,7 +32,11 @@ int main()
 
 	/* Show it on the screen */
 	doupdate();
-	
+
+	del_panel(my_panels[0]);
+	del_panel(my_panels[1]);
+	del_panel(my_panels[2]);
+
 	getch();
 	endwin();
 }

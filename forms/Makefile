@@ -15,10 +15,11 @@ EXES = \
 	${EXE_DIR}/form_win \
 
 ${EXE_DIR}/%: %.o
+	mkdir -p "${EXE_DIR}"
 	${CC} -o $@ $< ${LIBS}
 
 %.o: ${SRC_DIR}/%.c
-	${CC} -o $@ -c $<
+	${CC} ${CFLAGS} -o $@ -c $<
 
 all:    ${EXES}
 

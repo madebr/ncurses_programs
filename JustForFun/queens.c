@@ -1,21 +1,23 @@
-#include <stdio.h>
 #include <curses.h>
+
+#include <stdio.h>
+#include <stdlib.h>
 
 #define QUEEN_CHAR '*'
 
 int *nqueens(int num);
 int place(int current, int *position);
-int print(int *positions, int num_queens);
+void print(int *positions, int num_queens);
 void board(WINDOW *win, int starty, int startx, int lines, int cols, 
 	   int tile_width, int tile_height);
 
 int main(int argc, char *argv[])
 {
-	int num_queens, *positions, count;
+	int num_queens, *positions;
 	
 	if(argc != 2)
 	{	printf("Usage: %s <number of queens (chess board order)>\n", argv[0]);
-		exit(1);
+		return 1;
 	}
 
 	num_queens = atoi(argv[1]);
@@ -70,7 +72,7 @@ int place(int current, int *position)
 	return(1);
 }
 		
-int print(int *positions, int num_queens)
+void print(int *positions, int num_queens)
 {	int count;
 	int y = 2, x = 2, w = 4, h = 2;
 	static int solution = 1;

@@ -1,5 +1,8 @@
 #include <curses.h>
 
+#include <stdlib.h>
+#include <string.h>
+
 #define POSX 10
 #define POSY 5
 #define DISC_CHAR '*'
@@ -23,7 +26,7 @@ void check_usr_response(peg *p_my_pegs, int n_discs);
 int store_n_discs;
 char *welcome_string = "Enter the number of discs you want to be solved: ";
 
-int main(int argc, char *argv[])
+int main()
 {	int n_discs;
 	peg my_pegs[3];
 

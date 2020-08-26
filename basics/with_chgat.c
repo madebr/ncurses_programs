@@ -1,6 +1,6 @@
 #include <ncurses.h>
 
-int main(int argc, char *argv[])
+int main()
 {	initscr();			/* Start curses mode 		*/
 	start_color();			/* Start color functionality	*/
 	

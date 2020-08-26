@@ -1,4 +1,7 @@
+#include <curses.h>
 #include <panel.h>
+
+#include <string.h>
 
 typedef struct _PANEL_DATA {
 	int hide;	/* TRUE if panel is hidden */
@@ -119,10 +122,9 @@ void init_wins(WINDOW **wins, int n)
 
 /* Show the window with a border and a label */
 void win_show(WINDOW *win, char *label, int label_color)
-{	int startx, starty, height, width;
+{	int width;
 
-	getbegyx(win, starty, startx);
-	getmaxyx(win, height, width);
+	width = getmaxx(win);
 
 	box(win, 0, 0);
 	mvwaddch(win, 2, 0, ACS_LTEE); 

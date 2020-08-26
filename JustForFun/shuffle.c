@@ -1,5 +1,8 @@
 #include <curses.h>
 
+#include <stdlib.h>
+#include <time.h>
+
 #define STARTX 9
 #define STARTY 3
 #define WIDTH  6
@@ -28,7 +31,7 @@ int main(int argc, char *argv[])
 
 	if(argc != 2)
 	{	printf("Usage: %s <shuffle board order>\n", argv[0]);
-		exit(1);
+		return 1;
 	}
 	n = atoi(argv[1]);
 	
